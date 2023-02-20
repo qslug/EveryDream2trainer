@@ -1,0 +1,14 @@
+{
+    "name": "EveryDream2 Dev Container",
+	"image": "ghcr.io/qslug/ed2runpod:main",
+	"postStartCommand": "/start.sh",
+
+	"containerEnv": {
+		"LOCAL_DEV": "1"
+	},
+
+	// The optional 'workspaceFolder' property is the path VS Code should open by default when
+	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/EveryDream2trainer,type=bind",
+	"workspaceFolder": "/workspace/EveryDream2trainer"
+}
